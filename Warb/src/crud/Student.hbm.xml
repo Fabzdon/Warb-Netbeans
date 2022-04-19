@@ -1,0 +1,93 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Apr 18, 2022 1:58:46 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="crud.Student" table="student" catalog="warbsmsdb" optimistic-lock="version">
+        <id name="id" type="int">
+            <column name="Id" />
+            <generator class="assigned" />
+        </id>
+        <property name="firstName" type="string">
+            <column name="FirstName" length="50" />
+        </property>
+        <property name="middleName" type="string">
+            <column name="MiddleName" length="50" />
+        </property>
+        <property name="lastName" type="string">
+            <column name="LastName" length="50" />
+        </property>
+        <property name="birthCertNum" type="string">
+            <column name="BirthCertNum" length="20" />
+        </property>
+        <property name="dob" type="date">
+            <column name="DOB" length="10" />
+        </property>
+        <property name="dareReg" type="date">
+            <column name="DareReg" length="10" />
+        </property>
+        <property name="sportsHouse" type="string">
+            <column name="SportsHouse" length="20" />
+        </property>
+        <property name="club" type="string">
+            <column name="Club" length="20" />
+        </property>
+        <property name="gender" type="string">
+            <column name="Gender" length="10" />
+        </property>
+        <property name="studentAddress" type="string">
+            <column name="StudentAddress" length="200" />
+        </property>
+        <property name="motherName" type="string">
+            <column name="MotherName" length="100" />
+        </property>
+        <property name="motherOccupation" type="string">
+            <column name="MotherOccupation" length="100" />
+        </property>
+        <property name="motherTel" type="string">
+            <column name="MotherTel" length="10" />
+        </property>
+        <property name="fatherName" type="string">
+            <column name="FatherName" length="100" />
+        </property>
+        <property name="fatherTel" type="string">
+            <column name="FatherTel" length="10" />
+        </property>
+        <property name="fatherAddress" type="string">
+            <column name="FatherAddress" length="200" />
+        </property>
+        <property name="guardianName" type="string">
+            <column name="GuardianName" length="100" />
+        </property>
+        <property name="guardianOccupation" type="string">
+            <column name="GuardianOccupation" length="100" />
+        </property>
+        <property name="guardianAddress" type="string">
+            <column name="GuardianAddress" length="200" />
+        </property>
+        <property name="guardianTel" type="string">
+            <column name="GuardianTel" length="10" />
+        </property>
+        <property name="photo" type="binary">
+            <column name="Photo" />
+        </property>
+        <set name="healths" table="health" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="Id_Stu" />
+            </key>
+            <one-to-many class="crud.Health" />
+        </set>
+        <set name="assessments" table="assessment" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="Id_Stu" />
+            </key>
+            <one-to-many class="crud.Assessment" />
+        </set>
+        <set name="attendances" table="attendance" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="Id_Stu" />
+            </key>
+            <one-to-many class="crud.Attendance" />
+        </set>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Apr 18, 2022 1:58:46 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="crud.Health" table="health" catalog="warbsmsdb" optimistic-lock="version">
+        <id name="id" type="int">
+            <column name="Id" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="student" class="crud.Student" fetch="select">
+            <column name="Id_Stu" />
+        </many-to-one>
+        <property name="physicalDefects" type="string">
+            <column name="PhysicalDefects" length="100" />
+        </property>
+        <property name="asthmatic" type="string">
+            <column name="Asthmatic" length="10" />
+        </property>
+        <property name="urinaryDisoder" type="string">
+            <column name="UrinaryDisoder" length="10" />
+        </property>
+        <property name="earProblem" type="string">
+            <column name="EarProblem" length="10" />
+        </property>
+        <property name="eyeProblem" type="string">
+            <column name="EyeProblem" length="10" />
+        </property>
+        <property name="other" type="string">
+            <column name="Other" length="100" />
+        </property>
+    </class>
+</hibernate-mapping>

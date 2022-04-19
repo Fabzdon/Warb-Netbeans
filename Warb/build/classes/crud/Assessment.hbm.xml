@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Apr 18, 2022 1:58:46 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="crud.Assessment" table="assessment" catalog="warbsmsdb" optimistic-lock="version">
+        <id name="id" type="int">
+            <column name="Id" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="student" class="crud.Student" fetch="select">
+            <column name="Id_Stu" />
+        </many-to-one>
+        <property name="genKnowledge" type="java.lang.Integer">
+            <column name="GenKnowledge" />
+        </property>
+        <property name="numberConcept" type="java.lang.Integer">
+            <column name="NumberConcept" />
+        </property>
+        <property name="oralLang" type="java.lang.Integer">
+            <column name="OralLang" />
+        </property>
+        <property name="reading" type="java.lang.Integer">
+            <column name="Reading" />
+        </property>
+        <property name="structure" type="java.lang.Integer">
+            <column name="Structure" />
+        </property>
+        <property name="vocab" type="java.lang.Integer">
+            <column name="Vocab" />
+        </property>
+        <property name="studySkills" type="java.lang.Integer">
+            <column name="StudySkills" />
+        </property>
+        <property name="comTask" type="java.lang.Integer">
+            <column name="ComTask" />
+        </property>
+        <property name="numEst" type="java.lang.Integer">
+            <column name="NumEst" />
+        </property>
+        <property name="geometry" type="java.lang.Integer">
+            <column name="_Geometry" />
+        </property>
+        <property name="algebra" type="java.lang.Integer">
+            <column name="Algebra" />
+        </property>
+        <property name="statistics" type="java.lang.Integer">
+            <column name="Statistics" />
+        </property>
+        <property name="langArtGrade4" type="java.lang.Integer">
+            <column name="LangArtGrade4" />
+        </property>
+        <property name="mathGrade4" type="java.lang.Integer">
+            <column name="MathGrade4" />
+        </property>
+        <property name="langArtGrade5" type="java.lang.Integer">
+            <column name="LangArtGrade5" />
+        </property>
+        <property name="mathGrade5" type="java.lang.Integer">
+            <column name="MathGrade5" />
+        </property>
+        <property name="abilityTest" type="java.lang.Integer">
+            <column name="AbilityTest" />
+        </property>
+        <property name="mathGrade6" type="java.lang.Integer">
+            <column name="MathGrade6" />
+        </property>
+        <property name="langArtGrade6curri" type="java.lang.Integer">
+            <column name="LangArtGrade6Curri" />
+        </property>
+        <property name="mathGrade6curri" type="java.lang.Integer">
+            <column name="MathGrade6Curri" />
+        </property>
+        <property name="science" type="java.lang.Integer">
+            <column name="Science" />
+        </property>
+        <property name="socialStudies" type="java.lang.Integer">
+            <column name="SocialStudies" />
+        </property>
+        <property name="writingDrawing" type="java.lang.Integer">
+            <column name="WritingDrawing" />
+        </property>
+    </class>
+</hibernate-mapping>

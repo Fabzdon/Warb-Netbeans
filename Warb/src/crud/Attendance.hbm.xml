@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Apr 18, 2022 1:58:46 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="crud.Attendance" table="attendance" catalog="warbsmsdb" optimistic-lock="version">
+        <id name="id" type="int">
+            <column name="Id" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="student" class="crud.Student" fetch="select">
+            <column name="Id_Stu" />
+        </many-to-one>
+        <property name="year1Term1" type="java.lang.Integer">
+            <column name="Year1_Term1" />
+        </property>
+        <property name="year1Term2" type="java.lang.Integer">
+            <column name="Year1_Term2" />
+        </property>
+        <property name="year1Term3" type="java.lang.Integer">
+            <column name="Year1_Term3" />
+        </property>
+        <property name="year2Term1" type="java.lang.Integer">
+            <column name="Year2_Term1" />
+        </property>
+        <property name="year2Term2" type="java.lang.Integer">
+            <column name="Year2_Term2" />
+        </property>
+        <property name="year2Term3" type="java.lang.Integer">
+            <column name="Year2_Term3" />
+        </property>
+        <property name="year3Term1" type="java.lang.Integer">
+            <column name="Year3_Term1" />
+        </property>
+        <property name="year3Term2" type="java.lang.Integer">
+            <column name="Year3_Term2" />
+        </property>
+        <property name="year3Term3" type="java.lang.Integer">
+            <column name="Year3_Term3" />
+        </property>
+        <property name="year4Term1" type="java.lang.Integer">
+            <column name="Year4_Term1" />
+        </property>
+        <property name="year4Term2" type="java.lang.Integer">
+            <column name="Year4_Term2" />
+        </property>
+        <property name="year4Term3" type="java.lang.Integer">
+            <column name="Year4_Term3" />
+        </property>
+        <property name="year5Term1" type="java.lang.Integer">
+            <column name="Year5_Term1" />
+        </property>
+        <property name="year5Term2" type="java.lang.Integer">
+            <column name="Year5_Term2" />
+        </property>
+        <property name="year5Term3" type="java.lang.Integer">
+            <column name="Year5_Term3" />
+        </property>
+        <property name="year6Term1" type="java.lang.Integer">
+            <column name="Year6_Term1" />
+        </property>
+        <property name="year6Term2" type="java.lang.Integer">
+            <column name="Year6_Term2" />
+        </property>
+        <property name="year6Term3" type="java.lang.Integer">
+            <column name="Year6_Term3" />
+        </property>
+    </class>
+</hibernate-mapping>
